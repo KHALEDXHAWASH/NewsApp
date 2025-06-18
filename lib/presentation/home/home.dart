@@ -13,7 +13,7 @@ class Home extends StatelessWidget {
     var homeProvider = Provider.of<HomeProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
+        title: Text(homeProvider.title),
       ),
       drawer: HomeDrawer(),
       body: homeProvider.homeView

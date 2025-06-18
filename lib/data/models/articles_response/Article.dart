@@ -1,6 +1,8 @@
 
 
-import 'package:news_app_c14_online_sun/models/sources_response/Source.dart';
+
+import 'package:news_app_c14_online_sun/data/models/sources_response/Source.dart';
+import 'package:news_app_c14_online_sun/domain/entities/article_entity.dart';
 
 /// source : {"id":"the-verge","name":"The Verge"}
 /// author : "Emma Roth"
@@ -54,6 +56,11 @@ class Article {
     map['publishedAt'] = publishedAt;
     map['content'] = content;
     return map;
+  }
+
+
+  ArticleEntity toArticleEntity(){
+    return ArticleEntity(urlToImage:urlToImage, url: url, publishedAt: publishedAt, author: author, title: title, description: description );
   }
 
 }

@@ -1,3 +1,5 @@
+import 'package:news_app_c14_online_sun/domain/entities/source_entity.dart';
+
 /// id : "abc-news"
 /// name : "ABC News"
 /// description : "Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com."
@@ -44,6 +46,11 @@ class Source {
     map['language'] = language;
     map['country'] = country;
     return map;
+  }
+
+
+  SourceEntity toSourceEntity(){
+    return SourceEntity(name: name, id: id);
   }
 
 }

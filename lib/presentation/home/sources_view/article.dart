@@ -4,13 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app_c14_online_sun/core/assets_manager.dart';
 import 'package:news_app_c14_online_sun/core/colors_manager.dart';
-import 'package:news_app_c14_online_sun/models/article_model.dart';
-import 'package:news_app_c14_online_sun/models/articles_response/Article.dart';
+import 'package:news_app_c14_online_sun/domain/entities/article_entity.dart';
+
+
 
 class ArticleItem extends StatelessWidget {
   const ArticleItem({super.key, required this.article});
 
-  final Article article;
+  final ArticleEntity article;
 
   @override
   Widget build(BuildContext context) {
