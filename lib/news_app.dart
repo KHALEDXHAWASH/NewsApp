@@ -21,7 +21,7 @@ class NewsApp extends StatelessWidget
         initialRoute: RoutesManager.home,
         theme: ThemeManager.light,
         darkTheme: ThemeManager.dark,
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.dark,
         locale: Locale("en"),
       ),
 

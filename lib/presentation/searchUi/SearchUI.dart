@@ -58,7 +58,7 @@ class _SearchUIState extends State<SearchUI> {
                   {
                     view.search(value);
                   },
-                  style: Theme.of(context).textTheme.bodyMedium,
+                  style: Theme.of(context).textTheme.bodySmall,
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.search),
                     suffixIcon: IconButton(
