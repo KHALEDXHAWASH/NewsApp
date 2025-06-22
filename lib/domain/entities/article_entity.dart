@@ -1,4 +1,5 @@
-class ArticleEntity{
+class ArticleEntity
+{
   String? author;
   String? title;
   String? description;

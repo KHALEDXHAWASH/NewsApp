@@ -6,7 +6,8 @@ import 'package:news_app_c14_online_sun/core/extensions/context_extension.dart';
 import 'package:news_app_c14_online_sun/providers/home_provider.dart';
 import 'package:provider/provider.dart';
 
-class HomeDrawer extends StatelessWidget {
+class HomeDrawer extends StatelessWidget
+{
   const HomeDrawer({super.key});
 
   @override
@@ -70,27 +71,12 @@ class HomeDrawer extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Switch(value: true, onChanged: (value) {},),
-                  ],
-                ),
-                SizedBox(height: 24.h),
-                Divider(color: ColorsManager.white,thickness: 1,),
-                SizedBox(height: 24.h),
+                    Switch(value: true, onChanged: (value) {
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "English",
-                      style: GoogleFonts.inter(
-                        fontSize: 20.sp,
-                        color: ColorsManager.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Switch(value: true, onChanged: (value) {},),
+                    },),
                   ],
                 ),
+
               ],
             ),
           ),

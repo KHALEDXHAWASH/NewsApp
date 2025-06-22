@@ -1,15 +1,10 @@
 import 'package:news_app_c14_online_sun/domain/entities/source_entity.dart';
 
-/// id : "abc-news"
-/// name : "ABC News"
-/// description : "Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com."
-/// url : "https://abcnews.go.com"
-/// category : "general"
-/// language : "en"
-/// country : "us"
 
-class Source {
-  Source({
+class Source
+{
+  Source(
+      {
       this.id, 
       this.name, 
       this.description, 
@@ -18,7 +13,8 @@ class Source {
       this.language, 
       this.country,});
 
-  Source.fromJson(dynamic json){
+  Source.fromJson(dynamic json)
+  {
     id = json['id'];
     name = json['name'];
     description = json['description'];
@@ -49,7 +45,8 @@ class Source {
   }
 
 
-  SourceEntity toSourceEntity(){
+  SourceEntity toSourceEntity()
+  {
     return SourceEntity(name: name, id: id);
   }
 

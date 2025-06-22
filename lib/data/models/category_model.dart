@@ -1,6 +1,7 @@
 import 'package:news_app_c14_online_sun/core/assets_manager.dart';
 
-class CategoryModel {
+class CategoryModel
+{
   final String id;
   final String title;
   final String imagePath;

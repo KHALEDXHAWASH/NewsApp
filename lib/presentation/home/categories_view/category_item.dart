@@ -4,12 +4,14 @@ import 'package:news_app_c14_online_sun/data/models/category_model.dart';
 import 'package:news_app_c14_online_sun/providers/home_provider.dart';
 import 'package:provider/provider.dart';
 
-class CategoryItem extends StatelessWidget {
+class CategoryItem extends StatelessWidget
+{
   const CategoryItem({super.key, required this.category});
  final CategoryModel category;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     var homeProvider = Provider.of<HomeProvider>(context);
     return InkWell(
       onTap: () {

@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:news_app_c14_online_sun/core/assets_manager.dart';
-import 'package:news_app_c14_online_sun/core/colors_manager.dart';
 import 'package:news_app_c14_online_sun/core/widgets/error_state_widget.dart';
 import 'package:news_app_c14_online_sun/data/api_services/api_services.dart';
 import 'package:news_app_c14_online_sun/data/datasource_impl/articles_api_datasource.dart';

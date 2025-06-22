@@ -1,4 +1,5 @@
-class ArticleModel{
+class ArticleModel
+{
   final String title;
   final String imagePath;
   final String author;

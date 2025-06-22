@@ -20,15 +20,15 @@ class ErrorStateWidget extends StatelessWidget {
       return message;
     }
     if(exception is SocketException){
-      message = 'No Internet connection 😑';
+      message = 'There is no internet connection ';
       return message;
     }
     if(exception is FormatException){
-      message = "Bad response format 👎";
+      message = "Bad response format ";
       return message;
     }
     if(exception is HttpException){
-      message = "Couldn't find the post 😱";
+      message = "Couldn't find the post ";
       return message;
     }
     return message;

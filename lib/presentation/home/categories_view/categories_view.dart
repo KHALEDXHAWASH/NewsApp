@@ -11,10 +11,11 @@ class CategoriesView extends StatelessWidget {
     return Padding(
       padding: REdgeInsets.all(15.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "Good Morning\nHere is Some News For You",
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: Theme.of(context).textTheme.bodySmall,
           ),
           SizedBox(height: 16.h,),
           Expanded(
@@ -22,7 +23,14 @@ class CategoriesView extends StatelessWidget {
               separatorBuilder:  (context, index) => SizedBox(height: 16.h,),
               itemBuilder:
                   (context, index) =>
-                      CategoryItem(category: CategoryModel.categories[index]),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.r),
+                        child: Container(
+                          padding: EdgeInsets.symmetric(),
+                            decoration:BoxDecoration(color: Theme.of(context).primaryColor),
+                            child:
+                        CategoryItem(category: CategoryModel.categories[index])),
+                      ),
               itemCount: CategoryModel.categories.length,
             ),
           ),

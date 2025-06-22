@@ -1,32 +1,31 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-
-import 'package:news_app_c14_online_sun/data/api_services/api_services.dart';
 import 'package:news_app_c14_online_sun/data/api_services/result.dart';
-import 'package:news_app_c14_online_sun/data/datasource_contract/sources_datasource.dart';
-import 'package:news_app_c14_online_sun/data/datasource_impl/sources_api_datasource.dart';
 import 'package:news_app_c14_online_sun/data/models/category_model.dart';
-import 'package:news_app_c14_online_sun/data/models/sources_response/Source.dart';
-import 'package:news_app_c14_online_sun/data/repo_impl/sources_repository.dart';
 import 'package:news_app_c14_online_sun/domain/entities/source_entity.dart';
-import 'package:news_app_c14_online_sun/domain/repository_contract/sources_repository.dart';
 import 'package:news_app_c14_online_sun/domain/usecases/get_sources_usecase.dart';
 
 
-class SourcesViewModel extends ChangeNotifier {
+class SourcesViewModel extends ChangeNotifier
+{
   GetSourcesUseCase sourcesUseCase;
 
   SourcesViewModel({required this.sourcesUseCase});
   SourceViewModelStates state = SourcesLoadingState();
 
-  void emit(SourceViewModelStates newState) {
+  void emit(SourceViewModelStates newState)
+  {
     state = newState;
     notifyListeners();
   }
 
-  Future<void> loadSources(CategoryModel category) async {
+
+  Future<void> loadSources(CategoryModel category) async
+  {
     emit(SourcesLoadingState());
     var result = await sourcesUseCase.invoke(category);
-    switch (result) {
+    switch (result)
+    {
       case Success<List<SourceEntity>>():
         emit(SourcesSuccessState(sources: result.data));
       case ServerError<List<SourceEntity>>():
@@ -40,19 +39,22 @@ class SourcesViewModel extends ChangeNotifier {
 
 sealed class SourceViewModelStates {}
 
-class SourcesSuccessState extends SourceViewModelStates {
+class SourcesSuccessState extends SourceViewModelStates
+{
   List<SourceEntity> sources;
 
   SourcesSuccessState({required this.sources});
 }
 
-class SourcesLoadingState extends SourceViewModelStates {
+class SourcesLoadingState extends SourceViewModelStates
+{
   String? loadingMsg;
 
   SourcesLoadingState({this.loadingMsg});
 }
 
-class SourcesErrorState extends SourceViewModelStates {
+class SourcesErrorState extends SourceViewModelStates
+{
   ServerError? serverError;
   Exception? exception;
 
